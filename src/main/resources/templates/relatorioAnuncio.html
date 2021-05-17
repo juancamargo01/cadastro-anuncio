@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head xmlns:th="http://www.w3.org/1999/xhtml">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+
+<body>
+<div class="banner-text">
+
+    <div class="centerbutton">
+        <button class="button2"><a href="/listaAnuncios">Voltar</a></button>
+    </div>
+
+    <div class="centertable">
+        <div class="boxRelatorio">
+            <div class="panel panel-default" style="margin: 10px">
+                <div class="panel-heading">
+                    <h1 class="panel-title">Relatórios</h1>
+                    <hr>
+                </div>
+                <div class="panel-body">
+                    <form class="form-inline" method="POST" th:action="@{/relatorioAnuncios}"
+                          th:object="${anuncio}" style="margin: 20px 0">
+                        <div class="form-group">
+                            Data Inicio de:
+                            <input type="date" class="form-control" id="dataInicio"
+                                   th:field="*{dataInicio}" placeholder="Data Início" />
+                            Data Início até:
+                            <input type="date" class="form-control" id="dataTermino"
+                                   th:field="*{dataFinal}" placeholder="Data de Finalizacao" />
+                            Nome Cliente:
+                            <input type="text" class="form-control" id="cliente"
+                                   th:field="*{cliente.nome}" placeholder="nome do cliente" />
+
+                            <button type="submit" class="btn btn-primary button2" style="margin: 15px auto">Pesquisar </button>
+                        </div>
+                    </form>
+                    <table class="table">
+                        <div>
+                            <thead>
+
+                                <tr>
+                                    <th>Cliente</th>
+                                    <th>Nome Anúncio</th>
+                                    <th>Data Início</th>
+                                    <th>Data Término</th>
+                                    <th>Valor</th>
+                                    <th>Valor Total</th>
+                                    <th>Visualização</th>
+                                    <th>clicaram</th>
+                                    <th>Compartilhamentos</th>
+                                </tr>
+
+                            </thead>
+                        </div>
+                        <tbody>
+                            <tr th:each="anuncio : ${anuncios}">
+                                <td th:text="${anuncio.cliente.nome}"></td>
+                                <td th:text="${anuncio.nome}"></td>
+                                <td th:text="${anuncio.dataInicio}"></td>
+                                <td th:text="${anuncio.dataFinal}"></td>
+                                <td th:text="${anuncio.valor}"></td>
+                                <td th:text="${anuncio.valorTotal}"></td>
+                                <td th:text="${anuncio.qtdVisualizacao}"></td>
+                                <td th:text="${anuncio.qtdClick}"></td>
+                                <td th:text="${anuncio.qtdCompartilhamento}"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="animation-area ">
+    <ul class="box-area">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+
+</body>
+</html>

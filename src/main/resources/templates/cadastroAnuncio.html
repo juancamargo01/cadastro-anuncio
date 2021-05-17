@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+<div class="banner-text">
+    <div class="centertable">
+        <div class="box">
+
+            <h1>Cadastro de Anúncios</h1>
+            <hr>
+
+
+            <th:block th:include="mensagemValidacao"></th:block>
+            <form method="post" th:action="@{/cadastroAnuncio}" th:object="${anuncio}">
+                <p>Nome do Cliente :*</p> <input type="text" th:field="*{cliente.nome}"><br>
+                <p>Nome do Anúncio :*</p> <input type="text" th:field="*{nome}"><br>
+                <p>Data de Inicio :*</p>  <input type="date" th:field="*{dataInicio}"><br>
+                <p>Data de finalização :*</p> <input type="date" th:field="*{dataFinal}"><br>
+
+                <p>Valor de investimento diario :</p>  <input type="number" value="" name="valor"><br>
+
+                <button class="button2" type="submit" style="margin: 15px auto">Salvar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="animation-area ">
+    <ul class="box-area">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+</body>
+</html>
