@@ -1,4 +1,6 @@
-Tecnologias:
+# API em java
+
+<h2>Tecnologias:</h2>
 As tecnologias usada no porjeto sao :
 Sprintg-boot
 Spring-mvc
@@ -17,16 +19,22 @@ Intellij: Para desenvolvimento do projeto
 Construção
 Para construir o projeto com o Maven, executar os comando abaixo:
 
+```shell script
 mvn clean install
+```
 O comando irá baixar todas as dependências do projeto e criar um diretório target com os
 artefatos construídos, que incluem o arquivo jar do projeto. Além disso, serão executados
 os testes unitários, e se algum falhar, o Maven exibirá essa informação no console.
 
 Levantar Servidor
+```
 mvn spring-boot:run
+```
 O comando ira levantar um servidor H2 um banco de dados relacional escrito em Java
-a aplicação ira rodar na url:  http://localhost:8080/
-
+a aplicação ira rodar na url: 
+```
+ http://localhost:8080/
+```
 
 
 
