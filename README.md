@@ -26,7 +26,7 @@ O comando irá baixar todas as dependências do projeto e criar um diretório ta
 artefatos construídos, que incluem o arquivo jar do projeto. Além disso, serão executados
 os testes unitários, e se algum falhar, o Maven exibirá essa informação no console.
 
-Levantar Servidor
+<h2>Subir servidor local </h2>
 ```
 mvn spring-boot:run
 ```
@@ -38,15 +38,15 @@ a aplicação ira rodar na url:
 
 
 
-Testes
+<h2>Testes </h2>
 Para rodar os testes, utilize o comando abaixo:
 mvn test
 
 
-Licença
+ <h3>Licença</h3>
 Não se aplica.
 
-Conclusão
+<h3>Conclusão</h3>
 Esse projeto tentou atender as exigencias imposta pela atividade de se escrever um programa que:
 Crie um sistema que permita o cadastro de anúncios. O anúncio deverá conter os seguintes dados:
 nome do anúncio
