@@ -27,6 +27,7 @@ artefatos construídos, que incluem o arquivo jar do projeto. Além disso, serã
 os testes unitários, e se algum falhar, o Maven exibirá essa informação no console.
 
 <h2>Subir servidor local </h2>
+
 ```shell script
 mvn spring-boot:run
 ```
