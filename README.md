@@ -50,8 +50,8 @@ mvn test
 Não se aplica.
 
 <h3>Conclusão</h3>
-Esse projeto tentou atender as exigencias imposta pela atividade de se escrever um programa que:
-Crie um sistema que permita o cadastro de anúncios. O anúncio deverá conter os seguintes dados:
+
+Crie um sistema que permita o cadastro de anúncios. O anúncio contem os seguintes dados:
 nome do anúncio
 cliente
 data de início
